@@ -2,44 +2,44 @@ import React, { useState } from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
-  // const [enterTitle, setEnterTitle] = useState('');
-  // const [enterAmount, setEnterAmount] = useState('');
-  // const [enterDate, setEnterDate] = useState('');
+  const [enterTitle, setEnterTitle] = useState('');
+  const [enterAmount, setEnterAmount] = useState('');
+  const [enterDate, setEnterDate] = useState('');
 
-  const [userInput, setUserInput] = useState({
-    enteredTitle: '',
-    enteredAmount: '',
-    enteredDate: ''
-  });
+  // const [userInput, setUserInput] = useState({
+  //   enteredTitle: '',
+  //   enteredAmount: '',
+  //   enteredDate: ''
+  // });
 
   const titleChangeHandler = event => {
-    // setEnterTitle(event.target.value);
+    setEnterTitle(event.target.value);
     // setUserInput({
     //   ...userInput,
     //   enteredTitle: event.target.value
     // });
-    setUserInput(prevState => {
-      return {
-        ...prevState,
-        enteredTitle: event.target.value
-      };
-    });
+    // setUserInput(prevState => {
+    //   return {
+    //     ...prevState,
+    //     enteredTitle: event.target.value
+    //   };
+    // });
   };
 
   const amountChangeHandler = event => {
-    // setEnterAmount(event.target.value);
-    setUserInput({
-      ...userInput,
-      enteredAmount: event.target.value
-    });
+    setEnterAmount(event.target.value);
+    // setUserInput({
+    //   ...userInput,
+    //   enteredAmount: event.target.value
+    // });
   };
 
   const dateChangeHandler = event => {
-    // setEnterDate(event.target.value);
-    setUserInput({
-      ...userInput,
-      enteredDate: event.target.value
-    });
+    setEnterDate(event.target.value);
+    // setUserInput({
+    //   ...userInput,
+    //   enteredDate: event.target.value
+    // });
   };
 
   return (
